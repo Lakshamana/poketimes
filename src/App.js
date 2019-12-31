@@ -1,7 +1,23 @@
 import React from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
+import 'materialize-css/dist/css/materialize.min.css'
+
+import Navbar from './components/Navbar'
+import Home from './components/Home'
+import Contact from './components/Contact'
+import About from './components/About'
 
 function App() {
-  return <div className='App'></div>
+  return (
+    <BrowserRouter>
+      <div className='App'>
+        <Navbar />
+        <Route exact path='/' component={Home} />
+        <Route path='/about' component={About} />
+        <Route path='/contact' component={Contact} />
+      </div>
+    </BrowserRouter>
+  )
 }
 
 export default App
