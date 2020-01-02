@@ -10,7 +10,7 @@ class Home extends Component {
     const postList = posts.length ? (
       posts.map(post => {
         return (
-          <Link to={`/${post.id}`}>
+          <Link to={`/${post.id}`} key={post.id}>
             <div className='post card' key={post.id}>
               <img src={Pokeball} alt='A pokeball icon' />
               <div className='card-content'>
